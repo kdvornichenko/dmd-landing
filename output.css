@@ -667,6 +667,10 @@ section {
   margin-top: 3rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -713,6 +717,14 @@ section {
 
 .h-\[85vh\] {
   height: 85vh;
+}
+
+.h-\[82vh\] {
+  height: 82vh;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .w-1\/3 {
