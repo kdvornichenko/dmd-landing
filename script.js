@@ -50,7 +50,7 @@ function vkVisibility() {
 	vkSection.classList.toggle('h-0')
 	vkSection.classList.toggle('h-full')
 	vkSection.classList.toggle('pt-20')
-	// vkSection.scrollIntoView({ behavior: 'smooth', block: 'end' })
+	vkSection.scrollIntoView({ behavior: 'smooth', block: 'center' })
 
 	vkRepost.classList.toggle('h-0')
 	vkRepost.classList.toggle('h-full')
