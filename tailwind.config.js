@@ -11,9 +11,11 @@ module.exports = {
 				'arrow-phone': 'url(./icons/arrow-phone.svg)',
 			},
 			colors: {
+				h2: ' #8d6b5e',
 				'main-bg': '#d1beaf',
 			},
 			transitionProperty: {
+				height: 'height',
 				width: 'width',
 			},
 		},

@@ -12,26 +12,28 @@ const token = '5654256117:AAEN5oe9IdZoyZx4o39JbOSFBAUuJf7RlsE'
 const URI_API = `https://api.telegram.org/bot${token}/sendMessage`
 
 const sendPhoneBtn = document.querySelector('button')
-const modal = document.querySelector('#phone-modal')
-const modalTimer = modal.querySelector('#timer')
-const modalText = modal.querySelector('#text')
+
+const modalSend = document.querySelector('#phone-modal-send')
+const modalSendTimer = document.querySelector('#timer-send')
+const modalError = document.querySelector('#phone-modal-error')
+const modalErrorTimer = document.querySelector('#timer-error')
 
 function modalStatus(status) {
-	if (status == 'error') {
-		modalText.innerText = 'Введите корректный номер!'
-		modalTimer.classList.toggle('bg-green-400')
-		modalTimer.classList.toggle('bg-red-400')
-	}
-
 	if (status == 'ok') {
-		modalText.innerText = 'Отправлено!'
+		modalSend.classList.toggle('-bottom-full')
+		modalSend.classList.toggle('bottom-2.5')
+
+		modalSendTimer.classList.toggle('w-full')
+		modalSendTimer.classList.toggle('w-0')
 	}
 
-	modal.classList.toggle('-bottom-full')
-	modal.classList.toggle('bottom-2.5')
+	if (status == 'error') {
+		modalError.classList.toggle('-bottom-full')
+		modalError.classList.toggle('bottom-2.5')
 
-	modalTimer.classList.toggle('w-full')
-	modalTimer.classList.toggle('w-0')
+		modalErrorTimer.classList.toggle('w-full')
+		modalErrorTimer.classList.toggle('w-0')
+	}
 }
 
 function modalVisibility(status) {
@@ -39,6 +41,20 @@ function modalVisibility(status) {
 	setTimeout(() => {
 		modalStatus(status)
 	}, 2800)
+}
+
+const vkSection = document.querySelector('#vk-section')
+const vkRepost = document.querySelector('#vk-repost')
+
+function vkVisibility() {
+	vkSection.classList.toggle('h-0')
+	vkSection.classList.toggle('h-full')
+	vkSection.classList.toggle('pt-20')
+	vkSection.scrollIntoView({ behavior: 'smooth', block: 'end' })
+
+	vkRepost.classList.toggle('h-0')
+	vkRepost.classList.toggle('h-full')
+	vkRepost.classList.toggle('pt-20')
 }
 
 sendPhoneBtn.addEventListener('click', () => {
@@ -53,7 +69,7 @@ sendPhoneBtn.addEventListener('click', () => {
 			.catch(err => {
 				console.warn(err)
 			})
-			.finally(modalVisibility('ok'))
+			.finally(modalVisibility('ok'), vkVisibility())
 	} else {
 		modalVisibility('error')
 	}

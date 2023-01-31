@@ -43,11 +43,11 @@
 	>
 		<header class="py-5 px-2 flex justify-between bg-main-bg items-center">
 			<span class="h-0.5 w-1/3 bg-white"></span>
-			<a class="" href="https://vk.com/chernika.nails_dme">
-				chernika.nails_dme
+			<a href="https://dmd-gag.chernikanails.ru/" target="_blank">
+				chernikanails.dme
 			</a>
 		</header>
-		<main class="bg-white">
+		<main class="bg-white shadow-md">
 			<section
 				class="px-2.5 pb-3 h-[85%] relative flex flex-col bg-main-bg rounded-b-xl"
 			>
@@ -64,14 +64,12 @@
 				>
 					Чтобы получить бесплатный маникюр сделай всего 3 шага
 				</h1>
-				<span
-					class="mx-auto p-4 w-fit block absolute -bottom-9 left-0 right-0 bg-arrow bg-50% bg-no-repeat bg-center animate-bounce"
-				></span>
+				<span class="arrow-down -bottom-9"></span>
 			</section>
-			<section class="mt-20 px-2.5 pb-10 bg-white text-black">
-				<h2 class="font-playfair text-3xl text-[#8d6b5e]">
-					Введите свой номер телефона для связи
-				</h2>
+			<section
+				class="relative mt-10 pb-10 px-2.5 bg-white text-black rounded-b-xl z-20"
+			>
+				<h2 class="h2 text-h2">Введи свой номер телефона для связи</h2>
 				<div
 					class="relative px-2 py-1 mt-4 m-auto w-full flex justify-between items-center text-lg border rounded-lg"
 				>
@@ -90,18 +88,61 @@
 						class="flex w-7 h-7 rounded-md bg-arrow-phone bg-no-repeat bg-center bg-main-bg"
 					></button>
 					<div
-						id="phone-modal"
+						id="phone-modal-send"
 						class="fixed -bottom-full right-2.5 m-auto px-4 py-2 w-max flex items-center justify-center text-sm text-white rounded-md bg-black bg-opacity-80 overflow-hidden transition-all ease-linear duration-300"
 					>
 						<span
-							id="timer"
+							id="timer-send"
 							class="absolute top-0 left-0 w-full h-0.5 bg-green-400 bg-opacity-80 transition-width ease-linear delay-300 duration-[2500ms]"
 						></span>
 						<span id="text">Отправлено!</span>
 					</div>
+					<div
+						id="phone-modal-error"
+						class="fixed -bottom-full right-2.5 m-auto px-4 py-2 w-max flex items-center justify-center text-sm text-white rounded-md bg-black bg-opacity-80 overflow-hidden transition-all ease-linear duration-300"
+					>
+						<span
+							id="timer-error"
+							class="absolute top-0 left-0 w-full h-0.5 bg-red-400 bg-opacity-80 transition-width ease-linear delay-300 duration-[2500ms]"
+						></span>
+						<span id="text">Введите корректный номер!</span>
+					</div>
 				</div>
 			</section>
-			<span class="w-0 bottom-2.5 bg-red-400"></span>
+			<section
+				id="vk-section"
+				class="-mt-10 pb-10 px-2.5 h-0 bg-main-bg rounded-b-xl transition-height overflow-hidden z-10"
+			>
+				<h2 class="h2 text-white">Перейди по ссылке на пост ВК</h2>
+				<a
+					class="mt-5 block w-max mx-auto"
+					href="https://m.vk.com/chernika.nails_dme"
+					target="_blank"
+				>
+					<img src="./icons/vk.svg" alt="ВК" />
+				</a>
+				<span class="arrow-down -bottom-2"></span>
+			</section>
+
+			<section
+				id="vk-repost"
+				class="-mt-12 px-2.5 h-0 pb-10 bg-white transition-height overflow-hidden"
+			>
+				<h2 class="h2 text-h2">
+					Сделай репост себе на стену и отметь под ним 2-х подруг
+				</h2>
+				<p class="inline-block mt-6 text-lg text-black">
+					После выполнения всех условий наш администратор свяжется с тобой и
+					предложит дату для записи
+				</p>
+				<h2 class="h2 mt-6 text-center text-h2">
+					Успей забрать свой бесплатный маникюр!<br /><br />
+					Количество мест ограничено!
+				</h2>
+			</section>
+
+			<!-- Additional classes -->
+			<span class="hidden w-0 h-full bottom-2.5"></span>
 		</main>
 
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
