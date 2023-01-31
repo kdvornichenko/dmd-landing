@@ -8,6 +8,13 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				arrow: 'url(./icons/arrow.svg)',
+				'arrow-phone': 'url(./icons/arrow-phone.svg)',
+			},
+			colors: {
+				'main-bg': '#d1beaf',
+			},
+			transitionProperty: {
+				width: 'width',
 			},
 		},
 		fontFamily: {
