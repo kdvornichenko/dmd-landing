@@ -521,8 +521,8 @@ video {
   position: relative;
 }
 
-.-bottom-8 {
-  bottom: -2rem;
+.-bottom-9 {
+  bottom: -2.25rem;
 }
 
 .left-0 {
@@ -531,10 +531,6 @@ video {
 
 .right-0 {
   right: 0px;
-}
-
-.-bottom-9 {
-  bottom: -2.25rem;
 }
 
 .mx-auto {
@@ -693,6 +689,11 @@ video {
   font-family: Playfair Display, serif;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -706,14 +707,17 @@ video {
   line-height: 1.75rem;
 }
 
+.leading-8 {
+  line-height: 2rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
+}
+
 .text-\[\#f2f2f2\] {
   --tw-text-opacity: 1;
   color: rgb(242 242 242 / var(--tw-text-opacity));
-}
-
-.text-\[\#8d6b5e\] {
-  --tw-text-opacity: 1;
-  color: rgb(141 107 94 / var(--tw-text-opacity));
 }
 
 .text-white {
